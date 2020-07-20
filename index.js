@@ -16,7 +16,7 @@ expressApp.oauth = oAuth2Server({
 const restrictedAreaRoutesMethods = require('./routes/restrictedAreaRoutesMethods.js');
 const restrictedAreaRoutes = require('./routes/restrictedAreaRoutes.js')(express.Router(), expressApp, restrictedAreaRoutesMethods);
 const authRoutesMethods = require('./auth/authRoutesMethods')(userDBHelper);
-const authRoutes = require('./auth/authRoutes')(express.Router(), expressApp, authRoutesMethods);
+const authRoutes = require('./auth/authRouter')(express.Router(), expressApp, authRoutesMethods);
 const bodyParser = require('body-parser');
 
 //set the bodyParser to parse the urlencoded post data
